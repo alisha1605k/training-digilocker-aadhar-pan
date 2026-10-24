@@ -1,0 +1,465 @@
+/* ========================================
+   DIGILOCKER PAGE - COMPLETE CSS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   NAVIGATION BAR
+======================================== */
+
+.navbar {
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 50px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: #1565c0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #1565c0;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+header {
+    background: linear-gradient(135deg, #1565c0, #42a5f5);
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+header h1 {
+    font-size: 44px;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 19px;
+}
+
+
+/* ========================================
+   MAIN
+======================================== */
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 55px 20px;
+}
+
+
+/* ========================================
+   WELCOME / INTRODUCTION
+======================================== */
+
+.welcome {
+    background: white;
+    padding: 40px;
+    margin-bottom: 50px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.welcome h2 {
+    color: #1565c0;
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.welcome p {
+    font-size: 18px;
+    max-width: 950px;
+    margin: auto;
+}
+
+
+/* ========================================
+   OFFICIAL WEBSITE BUTTON
+======================================== */
+
+.official-button {
+    display: inline-block;
+    background: #1565c0;
+    color: white;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.official-button:hover {
+    background: #0d47a1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ========================================
+   SERVICES
+======================================== */
+
+.services h2 {
+    text-align: center;
+    color: #1565c0;
+    font-size: 34px;
+    margin-bottom: 35px;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+
+/* ========================================
+   SERVICE CARDS
+======================================== */
+
+.service-card {
+    background: white;
+    padding: 32px 25px;
+    border-radius: 18px;
+    text-align: center;
+    min-height: 260px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-card h3 {
+    color: #1565c0;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 16px;
+    margin-bottom: 22px;
+}
+
+
+/* ========================================
+   LEARN MORE BUTTON
+======================================== */
+
+.service-card button {
+    border: none;
+    background: #1565c0;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.service-card button:hover {
+    background: #0d47a1;
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   BACK TO HOME
+======================================== */
+
+.welcome a[href="../index.html"] {
+    display: inline-block;
+    background: #1565c0;
+    color: white;
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.welcome a[href="../index.html"]:hover {
+    background: #0d47a1;
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   MODAL POPUP
+======================================== */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    z-index: 2000;
+}
+
+.modal.active {
+    display: flex;
+}
+
+
+/* ========================================
+   MODAL CONTENT
+======================================== */
+
+.modal-content {
+    position: relative;
+
+    background: white;
+
+    width: 100%;
+    max-width: 600px;
+
+    padding: 45px 40px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+
+    animation: modalAppear 0.3s ease;
+}
+
+@keyframes modalAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.modal-content h2 {
+    color: #1565c0;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    color: #555;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+
+/* ========================================
+   MODAL CLOSE X BUTTON
+======================================== */
+
+.close-button {
+    position: absolute;
+
+    top: 12px;
+    right: 18px;
+
+    background: transparent;
+
+    border: none;
+
+    color: #555;
+
+    font-size: 32px;
+
+    cursor: pointer;
+
+    line-height: 1;
+}
+
+.close-button:hover {
+    color: #1565c0;
+}
+
+
+/* ========================================
+   MODAL CLOSE BUTTON
+======================================== */
+
+.modal-close {
+    border: none;
+
+    background: #1565c0;
+
+    color: white;
+
+    padding: 12px 28px;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.modal-close:hover {
+    background: #0d47a1;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    background: #17202a;
+    color: white;
+    text-align: center;
+    padding: 28px 20px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 15px 25px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .service-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 18px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    header {
+        padding: 50px 15px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    main {
+        padding: 35px 15px;
+    }
+
+    .welcome {
+        padding: 30px 20px;
+    }
+
+    .welcome h2 {
+        font-size: 27px;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: auto;
+    }
+}

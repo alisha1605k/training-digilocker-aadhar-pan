@@ -1,0 +1,353 @@
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   NAVIGATION BAR
+======================================== */
+
+.navbar {
+    width: 100%;
+    background: #17202a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 7%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #64b5f6;
+}
+
+
+/* ========================================
+   HERO SECTION
+======================================== */
+
+.hero {
+    min-height: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 70px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #1565c0,
+        #42a5f5,
+        #7e57c2
+    );
+}
+
+.hero-content {
+    max-width: 900px;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+.hero-button {
+    display: inline-block;
+    background: white;
+    color: #1565c0;
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ========================================
+   SERVICES SECTION
+======================================== */
+
+.services-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 25px;
+    text-align: center;
+}
+
+.services-section h2 {
+    color: #1565c0;
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.section-description {
+    font-size: 18px;
+    margin-bottom: 45px;
+    color: #555;
+}
+
+
+/* ========================================
+   SERVICE CARDS
+======================================== */
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.home-service-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 18px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.home-service-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ========================================
+   SERVICE ICONS
+======================================== */
+
+.service-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.home-service-card h3 {
+    font-size: 28px;
+    color: #1565c0;
+    margin-bottom: 15px;
+}
+
+.home-service-card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+
+/* ========================================
+   SERVICE BUTTONS
+======================================== */
+
+.service-button {
+    display: inline-block;
+
+    background: #1565c0;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 12px 24px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.service-button:hover {
+    background: #0d47a1;
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   ABOUT SECTION
+======================================== */
+
+.about-section {
+    background: white;
+    padding: 80px 25px;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-content h2 {
+    color: #1565c0;
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.about-content p {
+    font-size: 17px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    background: #17202a;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 900px) {
+
+    .service-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 15px;
+    }
+
+    .hero {
+        min-height: 450px;
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+
+    .services-section {
+        padding: 60px 20px;
+    }
+
+    .services-section h2 {
+        font-size: 32px;
+    }
+
+    .about-content h2 {
+        font-size: 30px;
+    }
+}
+/* ========================================
+   SEARCH BOX
+======================================== */
+
+.search-box {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+.search-box input {
+    width: 100%;
+
+    padding: 15px 20px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.search-box input:focus {
+    border-color: #1565c0;
+
+    box-shadow: 0 0 10px rgba(21, 101, 192, 0.15);
+}
