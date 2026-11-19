@@ -1,7 +1,7 @@
 
 const contactForm = document.getElementById("contactForm");
 
-const scriptURL = "https://script.google.com/macros/s/AKfycby4RMwe3LQzv-Gn_0OoqnTjJwOCAfdZeoaSooWdXIyk6_VYJ59KtJwDdJGjh5t-eIOv/exec";
+const scriptURL = https://script.google.com/macros/s/AKfycby4RMwe3LQzv-Gn_0OoqnTjJwOCAfdZeoaSooWdXIyk6_VYJ59KtJwDdJGjh5t-eIOv/exec;
 
 contactForm.addEventListener("submit", async function (event) {
     event.preventDefault();
