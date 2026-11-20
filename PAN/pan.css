@@ -656,3 +656,155 @@ footer p {
     }
 
 }
+
+/* ========================================
+   PAN DEMO FORM
+======================================== */
+
+.modal-content {
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+#modalMessage {
+    width: 100%;
+}
+
+.demo-form {
+    width: 100%;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.demo-form h3 {
+    color: #7b1fa2;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.demo-form-group {
+    margin-bottom: 17px;
+}
+
+.demo-form-group label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 7px;
+}
+
+.demo-form-group input,
+.demo-form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+    background: white;
+}
+
+.demo-form-group input:focus,
+.demo-form-group select:focus {
+    outline: none;
+    border-color: #8e24aa;
+    box-shadow: 0 0 5px rgba(142, 36, 170, 0.2);
+}
+
+.demo-submit,
+.demo-reset {
+    border: none;
+    padding: 12px 22px;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 8px 5px;
+}
+
+.demo-submit {
+    background: #8e24aa;
+    color: white;
+}
+
+.demo-submit:hover {
+    background: #6a1b9a;
+}
+
+.demo-reset {
+    background: #e5e7eb;
+    color: #333;
+}
+
+.demo-reset:hover {
+    background: #d1d5db;
+}
+
+.demo-notice {
+    background: #f3e5f5;
+    color: #6a1b9a !important;
+    padding: 12px;
+    border-radius: 7px;
+    font-size: 13px !important;
+    margin: 15px 0 !important;
+    text-align: left;
+}
+
+/* ========================================
+   PAN DEMO RESULT
+======================================== */
+
+.pan-demo-result {
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    border: 5px double #245b91;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.pan-demo-result h2 {
+    color: #245b91;
+    font-size: 25px;
+}
+
+.pan-demo-result h3 {
+    color: #17365d;
+    font-size: 19px;
+    margin: 12px 0;
+}
+
+.pan-demo-result .result-details {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.pan-demo-result .result-details p {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 5px;
+    overflow-wrap: anywhere;
+}
+
+/* ========================================
+   MOBILE FORM DESIGN
+======================================== */
+
+@media (max-width: 600px) {
+    .demo-submit,
+    .demo-reset {
+        width: 100%;
+        margin: 6px 0;
+    }
+
+    .pan-demo-result {
+        padding: 12px;
+    }
+
+    .modal-content {
+        max-height: 92vh;
+        padding: 35px 18px 20px;
+    }
+}

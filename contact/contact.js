@@ -1,6 +1,7 @@
-const contactForm = document.getElementById("contactForm");
 
-const scriptURL = "https://script.google.com/macros/s/AKfycby4RMwe3LQzv-Gn_0OoqnTjJwOCAfdZeoaSooWdXIyk6_VYJ59KtJwDdJGjh5t-eIOv/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycby4RMwe3LQzv-Gn_0OoqnTjJwOCAfdZeoaSooWdXIyk6_VYJ59KtJwDdJGjh5t-eIOv/exec";
+
+const contactForm = document.getElementById("contactForm");
 
 contactForm.addEventListener("submit", async function (event) {
     event.preventDefault();
@@ -51,36 +52,51 @@ contactForm.addEventListener("submit", async function (event) {
 
     if (!isValid) return;
 
-    const submitButton = contactForm.querySelector(".submit-button");
-    submitButton.disabled = true;
-    submitButton.textContent = "Submitting...";
-
-    const formData = new URLSearchParams();
-    formData.append("name", name);
-    formData.append("email", email);
-    formData.append("service", service);
-    formData.append("message", message);
+    const submitButton = contactForm.querySelector(
+        'button[type="submit"], input[type="submit"]'
+    );
 
     try {
-        await fetch(scriptURL, {
+        if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.textContent = "Submitting...";
+        }
+
+        successMessage.textContent = "Submitting your feedback...";
+
+        const formData = new URLSearchParams();
+        formData.append("name", name);
+        formData.append("email", email);
+        formData.append("service", service);
+        formData.append("message", message);
+
+        const response = await fetch(SCRIPT_URL, {
             method: "POST",
             body: formData,
-            mode: "no-cors"
+            redirect: "follow"
         });
 
+        const result = (await response.text()).trim();
+
+        if (result !== "SUCCESS") {
+            throw new Error("Your information could not be saved.");
+        }
+
         successMessage.textContent =
-            "✓ Thank you! Your feedback has been submitted.";
+            "✓ Thank you! Your feedback has been saved successfully.";
 
         contactForm.reset();
 
     } catch (error) {
-        successMessage.textContent =
-            "Unable to submit your feedback. Please try again.";
+        console.error("Contact form error:", error);
 
-        console.error(error);
+        successMessage.textContent =
+            "Sorry! Something went wrong. Please try again.";
 
     } finally {
-        submitButton.disabled = false;
-        submitButton.textContent = "Submit Feedback";
+        if (submitButton) {
+            submitButton.disabled = false;
+            submitButton.textContent = "Submit";
+        }
     }
 });

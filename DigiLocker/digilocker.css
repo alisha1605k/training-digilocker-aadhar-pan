@@ -463,3 +463,138 @@ footer p {
         min-height: auto;
     }
 }
+
+/* ========================================
+   DIGILOCKER INTERACTIVE FORMS
+======================================== */
+
+.modal-content {
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.demo-form {
+    text-align: left;
+    margin-top: 25px;
+}
+
+.demo-form-group {
+    margin-bottom: 18px;
+}
+
+.demo-form-group label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 7px;
+    font-size: 15px;
+}
+
+.demo-form-group input,
+.demo-form-group select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccd5e0;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    background: #fff;
+}
+
+.demo-form-group input:focus,
+.demo-form-group select:focus {
+    border-color: #1565c0;
+    box-shadow: 0 0 5px rgba(21, 101, 192, 0.2);
+}
+
+.demo-submit,
+.demo-reset {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.demo-submit {
+    background: #1565c0;
+    color: white;
+}
+
+.demo-submit:hover {
+    background: #0d47a1;
+}
+
+.demo-reset {
+    background: #e5eaf0;
+    color: #333;
+}
+
+.demo-reset:hover {
+    background: #cbd5e1;
+}
+
+/* RESULT BOX */
+
+.demo-result {
+    background: #f0f7ff;
+    border: 1px solid #b8d6f5;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 22px;
+    text-align: left;
+}
+
+.demo-result h3 {
+    color: #1565c0;
+    margin-bottom: 12px;
+}
+
+.demo-result p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.result-status {
+    color: #187344 !important;
+    font-weight: bold;
+}
+
+.result-details {
+    background: white;
+    padding: 14px;
+    border-radius: 8px;
+    margin: 12px 0;
+}
+
+.demo-notice {
+    color: #72520b !important;
+    background: #fff8e5;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 13px !important;
+    margin-top: 12px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+    .modal-content {
+        padding: 45px 20px 25px;
+        max-height: 90vh;
+    }
+
+    .modal-content h2 {
+        font-size: 24px;
+    }
+
+    .demo-submit,
+    .demo-reset {
+        width: 100%;
+        margin: 6px 0;
+    }
+}
